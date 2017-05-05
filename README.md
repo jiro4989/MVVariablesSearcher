@@ -60,7 +60,7 @@ MV Variables Searcher
 
 VBScriptはWindows環境にしかないスクリプト言語です。
 
-この事はつまり、他のOS (Linux, Mac etc)で動作しないことを意味します。
+この事はつまり、__他のOS (Linux, Mac etc)で動作しない__ことを意味します。
 
 Widnwos以外のOSをご利用の方は、Javaで作成しているmvvsを起動することができても、
 ツクール側で変数を選択させることができないと思います。
