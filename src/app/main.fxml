@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.TableColumn?>
@@ -14,7 +19,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@/app/res/css/basic.css" xmlns="http://javafx.com/javafx/8.0.131" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" stylesheets="@/app/res/css/basic.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.MainController">
   <top>
     <GridPane hgap="5.0" BorderPane.alignment="CENTER">
       <columnConstraints>
@@ -55,16 +60,33 @@
       </padding>
     </GridPane>
   </top>
-
-  <center>
-    <TableView fx:id="tableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-      <columns>
-        <TableColumn fx:id="idColumn" prefWidth="75.0" text="ID" />
-        <TableColumn fx:id="nameColumn" prefWidth="300.0" text="名前" />
-      </columns>
-    </TableView>
-  </center>
   <padding>
     <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
   </padding>
+  <center>
+    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+      <tabs>
+        <Tab text="変数">
+          <content>
+            <TableView fx:id="varTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="varIdColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="varNameColumn" prefWidth="300.0" text="名前" />
+              </columns>
+            </TableView>
+          </content>
+        </Tab>
+        <Tab text="スイッチ">
+          <content>
+            <TableView fx:id="switchTableView" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="switchIdColumn" prefWidth="75.0" text="ID" />
+                <TableColumn fx:id="switchNameColumn" prefWidth="300.0" text="名前" />
+              </columns>
+            </TableView>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
 </BorderPane>
