@@ -1,0 +1,7 @@
+v1.1.1
+MVVariablesSearcher.zip
+README.html
+java_download.html
+mvvs.jar
+search_switches.vbs
+search_vars.vbs
